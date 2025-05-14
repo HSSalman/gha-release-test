@@ -9,4 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Hello World
-        run: echo "Hello, world!"
+        run: |
+          echo "Hello, world!"
+          echo "Commit hash: ${{ github.sha }}"
+          echo "Commit message: ${{ github.event.head_commit.message }}"
